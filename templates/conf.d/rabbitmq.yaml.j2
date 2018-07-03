@@ -4,7 +4,7 @@ init_config: null
 
 
 instances:
-  - rabbitmq_api_url: http://{{ internal_lb_vip_address }}:15672/api/
+  - rabbitmq_api_url: https://{{ internal_lb_vip_address }}:15672/api/
     rabbitmq_user: {{ rabbitmq_monitoring_userid|default('monitoring') }}
     rabbitmq_pass: {{ rabbitmq_monitoring_password }}
     dimensions:
