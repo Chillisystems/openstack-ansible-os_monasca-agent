@@ -6,7 +6,7 @@
 init_config: null
 
 instances:
-  - url: https://{{ internal_lb_vip_address }}:{{ haproxy_stats_port | default('1936')}}
+  - url: {{ haproxy_protocol | default('https') }}://{{ internal_lb_vip_address }}:{{ haproxy_stats_port | default('1936')}}
     username: {{ haproxy_username | default('admin') }}
     password: {{ haproxy_stats_password }}
     collect_service_stats_only: False
